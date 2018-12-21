@@ -1,0 +1,10 @@
+<nav class="nav-bar">
+  <div class="nav-bar-logo"></div>
+  <div class="nav-bar-mobile-burger" [ngClass]="{'mobileOpen':mobileOpen}" (click)="mobileOpen = true"></div>
+  <div class="nav-bar-mobile-closex" [ngClass]="{'mobileOpen':mobileOpen}" (click)="mobileOpen = false"></div>
+  <ul class="nav-bar-menu" [ngClass]="{'mobileOpen':mobileOpen}">
+    <li class="nav-bar-item"><a>Products</a></li>
+    <li class="nav-bar-item"><a>About</a></li>
+    <li class="nav-bar-item"><a>Contact</a></li>
+  </ul>
+</nav>

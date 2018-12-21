@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=KoHo|Manuale');
+@import '../../assets/styles/variables';
+@font-face {
+  font-family: 'Helvetica Neue Light';
+    src: url('../../assets/fonts/HelveticaNeue-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Medium';
+    src: url('../../assets/fonts/HelveticaNeue-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+    src: url('../../assets/fonts/HelveticaNeue-Bold.woff') format('woff');
+}
+
+.nav-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $primary-color;
+  padding: 20px 25px 20px 25px;
+  
+  @media (min-width: 768px) {
+    padding: 27px 40px 26px 40px;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(109,147,204,0.1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(109,147,204,0.1);
+    box-shadow: 10px 10px 0px 0px rgba(109,147,204,0.1);
+  }
+  
+  .nav-bar-logo {
+    width: 19px;
+    height: 21px;
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='37' viewBox='0 0 34 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.2191 22.4149C10.0819 20.2688 10.0819 16.7987 12.2191 14.6526L23.0336 3.79383C24.0657 2.75751 25.4681 2.17496 26.9307 2.17496C29.9682 2.17496 32.4307 4.63739 32.4307 7.67496V29.3926C32.4307 30.8552 31.8481 32.2575 30.8118 33.2896C28.6595 35.4331 25.1771 35.426 23.0336 33.2737L12.2191 22.4149Z' stroke='%236D93CC' stroke-width='3'/%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='37'%3E%3Cpath d='M22.8222 23.4734L12.0077 34.3322C9.27963 37.0714 4.84749 37.0805 2.10823 34.3524C0.789284 33.0389 0.0478516 31.254 0.0478516 29.3926V7.67496C0.0478516 3.80896 3.18186 0.674957 7.04785 0.674957C8.90933 0.674957 10.6941 1.41639 12.0077 2.73534L22.8222 13.5941C25.5424 16.3255 25.5424 20.742 22.8222 23.4734Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.7594 22.4149C23.8967 20.2688 23.8967 16.7987 21.7594 14.6526L10.9449 3.79383C9.91279 2.75751 8.51044 2.17496 7.04785 2.17496C4.01029 2.17496 1.54785 4.63739 1.54785 7.67496V29.3926C1.54785 30.8552 2.13041 32.2575 3.16672 33.2896C5.31899 35.4331 8.80139 35.426 10.9449 33.2737L21.7594 22.4149Z' stroke='%23F7AE65' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @media (min-width: 768px) {
+      width: 34px;
+      height: 37px;
+    }
+  }
+  
+  .nav-bar-mobile-burger {
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='0.5' x2='20' y2='0.5' stroke='%23295DAB'/%3E%3Cline y1='9.5' x2='20' y2='9.5' stroke='%23295DAB'/%3E%3Cline y1='18.5' x2='20' y2='18.5' stroke='%23295DAB'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    &.mobileOpen {
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .nav-bar-mobile-closex {
+    display: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.575158' y1='14.7175' x2='14.7173' y2='0.575356' stroke='%23295DAB'/%3E%3Cline x1='1.28226' y1='0.57589' x2='15.4244' y2='14.718' stroke='%23295DAB'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    &.mobileOpen {
+      display: block;
+    }
+    
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .nav-bar-menu {
+    display: none;
+    position: absolute;
+    top: 74%;
+    right: -1px;
+    border: 1px solid $primary-color;
+    background-color: #fff;
+    list-style: none;
+    padding: 24px;
+    z-index: 999;
+    
+    &.mobileOpen {
+      display: block;
+    }
+    
+    @media (min-width: 768px) {
+      position: relative;
+      display: flex;
+      top: auto;
+      right: auto;
+      flex-direction: row;
+      border: 0;
+      padding: 0;
+    }
+    
+    .nav-bar-item {
+      
+      &:not(:last-child) {
+        
+        margin: 0 0 24px 0;
+        
+        @media (min-width: 768px) {
+          margin: 0 40px;
+        }
+      }
+      
+      a {
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+  }
+}

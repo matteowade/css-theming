@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=KoHo|Manuale');
+@import '../../assets/styles/variables';
+@font-face {
+  font-family: 'Helvetica Neue Light';
+    src: url('../../assets/fonts/HelveticaNeue-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Medium';
+    src: url('../../assets/fonts/HelveticaNeue-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+    src: url('../../assets/fonts/HelveticaNeue-Bold.woff') format('woff');
+}
+
+.email-signup {
+  align-items: center;
+  padding: 34px 16px;
+  display: flex;
+  flex-direction: column;
+  
+  @media (min-width: 420px) {
+    padding: 60px 20px;
+  }
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  
+  .email-signup-copy {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+    
+    @media (min-width: 768px) {
+      text-align: left;
+      width: 50%;
+      margin-bottom: 0;
+      padding-right: 24px;
+    }
+    
+    @media (min-width: 992px) {
+      padding-right: 20%;
+    }
+  }
+  
+  .email-signup-form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $primary-color;
+    padding-bottom: 10px;
+    
+    @media (min-width: 768px) {
+      width: 50%;
+      padding-bottom: 20px;
+    }
+    
+    .email-signup-input {
+      flex-grow: 1;
+      font-family: 'Helvetica Neue Light';
+      font-size: 18px;
+      color: $primary-color;
+      border: 0;
+      
+      @media (min-width: 420px) {
+        font-size: 22px;
+      }
+      
+      @media (min-width: 768px) {
+        font-size: 26px;
+      }
+      
+      &::placeholder {
+        opacity: .7;
+        color: $primary-color;
+      }
+      
+      &:focus {
+        outline: 0;
+      }
+    }
+    
+    .email-signup-sumbit {
+      flex-grow: 0;
+      font-family: 'Helvetica Neue Light';
+      font-size: 18px;
+      color: $primary-color;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      
+      .desktop-text {
+        display: none;
+      }
+      
+      @media (min-width: 420px) {
+        font-size: 22px;
+      }
+      
+      @media (min-width: 768px) {
+        font-size: 26px;
+        
+        .desktop-text {
+          display: inline;
+        }
+        
+        .mobile-text {
+          display: none;
+        }
+      }
+    }
+  }
+}

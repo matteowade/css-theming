@@ -1,0 +1,131 @@
+<div class="container">
+  <ul class="tab-nav">
+    <li class="tab-nav-item">
+      <button class="tab-nav-button" [ngClass]="{'selected':selectedTab === 'typography'}" (click)="selectedTab = 'typography'">Typography</button>
+    </li>
+    <li class="tab-nav-item">
+      <button class="tab-nav-button" [ngClass]="{'selected':selectedTab === 'buttons'}" (click)="selectedTab = 'buttons'">Buttons</button>
+    </li>
+    <li class="tab-nav-item">
+      <button class="tab-nav-button" [ngClass]="{'selected':selectedTab === 'components'}" (click)="selectedTab = 'components'">Components</button>
+    </li>
+  </ul>
+  
+  <!-- Typography Contents -->
+  <div *ngIf="selectedTab === 'typography'">
+    <div class="content-container">
+      <ul class="content-list">
+        <li class="content-list-item">
+          <h1>Headline Big</h1>
+          <div class="content-list-specs">
+            font-size: 96px;<br>
+            line-height: 130px;
+          </div>
+        </li>
+        <li class="content-list-item">
+          <h2>Headline Normal</h2>
+          <div class="content-list-specs">
+            font-size: 28px;<br>
+            line-height: 44px;
+          </div>
+        </li>
+        <li class="content-list-item">
+          <h3>Headline Callout</h3>
+          <div class="content-list-specs">
+            font-size: 26px;<br>
+            line-height: 36px;
+          </div>
+        </li>
+        <li class="content-list-item">
+          <p class="p-big">Paragraph Big</p>
+          <div class="content-list-specs">
+            font-size: 26px;<br>
+            line-height: 44px;
+          </div>
+        </li>
+        <li class="content-list-item">
+          <p>Paragraph Normal</p>
+          <div class="content-list-specs">
+            font-size: 20px;<br>
+            line-height: 44px;
+          </div>
+        </li>
+        <li class="content-list-item">
+          <button class="btn">Button Copy</button>
+          <div class="content-list-specs">
+            font-size: 20px;<br>
+            line-height: 28px;
+          </div>
+        </li>
+        <li class="content-list-item">
+          <a href="#">Link</a>
+          <div class="content-list-specs">
+            font-size: 20px;<br>
+            line-height: 28px;
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-container">
+      <div class="content-example">
+        <div class="content-example-col1">
+          <h1>A home for a joyful world.</h1>
+          <p class="p-big">Furniture for the forward thinking. <br>Different by design.</p>
+        </div>
+        <div class="content-example-col2">
+          <button class="btn">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Button Contents -->
+  <div *ngIf="selectedTab === 'buttons'">
+    <div class="content-container">
+      
+      <div class="button-style-guide-section">
+        <p class="style-guide-section-title">Shop Now Button</p>
+        <button class="btn">Shop Now</button>
+      </div>
+      
+      <div class="button-style-guide-section">
+        <p class="style-guide-section-title">Shop Now Button</p>
+        <button class="btn-callout">Add to Cart</button>
+      </div>
+      
+      <div class="button-style-guide-section">
+        <p class="style-guide-section-title">Links</p>
+        <a href="">Products</a>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Component Contents -->
+  <div *ngIf="selectedTab === 'components'">
+    <div class="content-container">
+      
+      <div class="button-style-guide-section">
+        <p class="style-guide-section-title">Nav Bar</p>
+        
+        <app-nav-bar></app-nav-bar>
+        
+      </div>
+      
+      <div class="button-style-guide-section">
+        <p class="style-guide-section-title">Product Grid</p>
+        
+        <app-product-grid></app-product-grid>
+        
+      </div>
+      
+      <div class="button-style-guide-section">
+        <p class="style-guide-section-title">Email Sign Up</p>
+        <app-email-signup></app-email-signup>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
