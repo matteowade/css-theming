@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-nav.component.scss']
 })
 export class TabNavComponent implements OnInit {
-  selectedTab = 'components';
+  selectedTab = 'typography';
   constructor() { }
 
   ngOnInit() {
