@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabNavComponent implements OnInit {
   selectedTab = 'typography';
+  h1Styles = {};
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  styleChange(event) {
+    this.h1Styles = event;
+  }
 }

@@ -1,0 +1,8 @@
+<div class="universal-dropdown" (clickOutside)="closeMenu()">
+  <input [id]="uniqueId" class="universal-dropdown-checkbox" type="checkbox" [checked]="menuOpen" (change)="menuOpen = !menuOpen">
+  <label [for]="uniqueId" class="universal-dropdown-label" [style.z-index]="zIndex">
+    <div class="universal-dropdown-button">
+      <ng-content></ng-content>
+    </div>
+  </label>
+</div>

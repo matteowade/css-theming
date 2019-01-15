@@ -16,8 +16,9 @@
     <div class="content-container">
       <ul class="content-list">
         <li class="content-list-item">
-          <h1>Headline Big</h1>
+          <h1 [dtTheme]="h1Styles">Headline Big</h1>
           <div class="content-list-specs">
+            <app-font-list cssRule="h1" (change)="styleChange($event)"></app-font-list>
             font-size: 96px;<br>
             line-height: 130px;
           </div>
@@ -70,7 +71,7 @@
     <div class="content-container">
       <div class="content-example">
         <div class="content-example-col1">
-          <h1>A home for a joyful world.</h1>
+          <h1 [dtTheme]="h1Styles">A home for a joyful world.</h1>
           <p class="p-big">Furniture for the forward thinking. <br>Different by design.</p>
         </div>
         <div class="content-example-col2">
