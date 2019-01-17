@@ -15,6 +15,8 @@ import { CustomSelectMenuComponent } from './custom-select-menu/custom-select-me
 
 import { ClickOutsideDirective } from './directives/click-outside';
 import { ThemeDirective } from './directives/theme.directive';
+import { FontSizeComponent } from './font-size/font-size.component';
+import { LineHeightComponent } from './line-height/line-height.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ThemeDirective } from './directives/theme.directive';
     FontListComponent,
     CustomSelectMenuComponent,
     ClickOutsideDirective,
-    ThemeDirective
+    ThemeDirective,
+    FontSizeComponent,
+    LineHeightComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-tab-nav',
@@ -15,6 +15,11 @@ export class TabNavComponent implements OnInit {
   }
 
   styleChange(event) {
-    this.h1Styles = event;
+    const _this = this;
+    _this.h1Styles = {};
+    setTimeout(() => {
+      _this.h1Styles = event;
+      console.log(_this.h1Styles);
+    }, 10);
   }
 }

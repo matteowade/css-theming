@@ -14,6 +14,7 @@ export class ThemeDirective implements OnChanges {
   }
 
   ngOnChanges() {
+    // console.log('changed');
     Object.keys(this.theme).forEach(prop => {
       this.el.nativeElement.style.setProperty(`--${prop}`, this.theme[prop]);
     });

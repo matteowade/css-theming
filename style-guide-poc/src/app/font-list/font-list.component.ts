@@ -11,12 +11,11 @@ import { CustomSelectMenuComponent } from '../custom-select-menu/custom-select-m
 })
 export class FontListComponent implements OnInit {
   @Input() cssRule;
-  @Output() change = new EventEmitter();
+  @Output() changeFace = new EventEmitter();
   public fontObj = {};
   public fontListLoaded = false;
   public fonts;
   public chosenFontFace;
-  public chosenFontSize;
 
   constructor(private _fontsService: FontsService) { }
 
@@ -41,7 +40,6 @@ export class FontListComponent implements OnInit {
     for (let i = 0; i < this.fonts.items.length; i++) {
       fontsToLoad.push(this.fonts.items[i].family);
     }
-    console.log(fontsToLoad);
 
     WebFont.load({
       google: {
@@ -57,13 +55,7 @@ export class FontListComponent implements OnInit {
     this.broadcastChanges();
   }
 
-  selectFontSize(fontSize) {
-    this.chosenFontSize = fontSize;
-    this.fontObj[this.cssRule + '-font-size'] = fontSize;
-    this.broadcastChanges();
-  }
-
   broadcastChanges() {
-    this.change.emit(this.fontObj);
+    this.changeFace.emit(this.fontObj);
   }
 }

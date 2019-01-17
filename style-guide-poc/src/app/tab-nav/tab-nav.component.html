@@ -18,9 +18,9 @@
         <li class="content-list-item">
           <h1 [dtTheme]="h1Styles">Headline Big</h1>
           <div class="content-list-specs">
-            <app-font-list cssRule="h1" (change)="styleChange($event)"></app-font-list>
-            font-size: 96px;<br>
-            line-height: 130px;
+            <app-font-list cssRule="h1" (changeFace)="styleChange($event)"></app-font-list>
+            font-size: <app-font-size cssRule="h1" (changeSize)="styleChange($event)"></app-font-size>px<br>
+            line-height: <app-line-height cssRule="h1" (changeHeight)="styleChange($event)"></app-line-height>px
           </div>
         </li>
         <li class="content-list-item">
