@@ -14,6 +14,7 @@ export class FontListComponent implements OnInit {
   @Output() changeFace = new EventEmitter();
   public fontObj = {};
   public fontListLoaded = false;
+  public fontsLoaded = false;
   public fonts;
   public chosenFontFace;
 
@@ -28,15 +29,19 @@ export class FontListComponent implements OnInit {
       data => {this.fonts = data},
       err => console.error(err),
       () => {
-        console.log(this.fonts);
         this.fontListLoaded = true;
-        this.loadFonts();
+
+        if (!this.fontsLoaded) {
+          this.loadFonts();
+        }
       }
     );
   }
 
   loadFonts() {
     const fontsToLoad = [];
+    const _this = this;
+
     for (let i = 0; i < this.fonts.items.length; i++) {
       fontsToLoad.push(this.fonts.items[i].family);
     }
@@ -45,7 +50,11 @@ export class FontListComponent implements OnInit {
       google: {
         families: fontsToLoad
       },
-      timeout: 20000
+      classes: false,
+      timeout: 20000,
+      active: function() {
+        _this.fontsLoaded = true;
+      }
     });
   }
 

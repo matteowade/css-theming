@@ -10,9 +10,9 @@
       <button class="tab-nav-button" [ngClass]="{'selected':selectedTab === 'components'}" (click)="selectedTab = 'components'">Components</button>
     </li>
   </ul>
-  
+
   <!-- Typography Contents -->
-  <div class="content-wrapper" *ngIf="selectedTab === 'typography'">
+  <div class="content-wrapper" [ngClass]="{'hide':selectedTab !== 'typography'}">
     <div class="content-container">
       <ul class="content-list">
         <li class="content-list-item">
@@ -82,7 +82,7 @@
   </div>
   
   <!-- Button Contents -->
-  <div class="content-wrapper" *ngIf="selectedTab === 'buttons'">
+  <div class="content-wrapper" [ngClass]="{'hide':selectedTab !== 'buttons'}">
     <div class="content-container">
       
       <div class="button-style-guide-section">
@@ -104,7 +104,7 @@
   </div>
   
   <!-- Component Contents -->
-  <div class="content-wrapper" *ngIf="selectedTab === 'components'">
+  <div class="content-wrapper" [ngClass]="{'hide':selectedTab !== 'components'}">
     <div class="content-container">
       
       <div class="button-style-guide-section">

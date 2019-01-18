@@ -1,4 +1,4 @@
-<app-custom-select-menu cssId="fontDropdown" zIndex="105" class="font-dropdown">
+<app-custom-select-menu *ngIf="fontListLoaded" cssId="fontDropdown" zIndex="105" class="font-dropdown">
   <div class="universal-dropdown-button-text">
     <span *ngIf="chosenFontFace" [ngStyle]="{'font-family':chosenFontFace}">{{chosenFontFace}}</span>
     <span *ngIf="!chosenFontFace">Select a Font</span>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import * as WebFont from 'webfontloader';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,5 +15,5 @@ export class FontsService {
 
   getFonts() {
     return this.http.get('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDIEVkGcqNW7KopBgborC0ipi--giItGUQ');
-  }
+  } 
 }
