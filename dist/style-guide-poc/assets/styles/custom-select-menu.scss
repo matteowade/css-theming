@@ -1,0 +1,113 @@
+@import '../../assets/styles/variables';
+
+.universal-dropdown {
+  position: relative;
+  min-height: 44px;
+  
+  .universal-dropdown-checkbox {
+    display: none;
+    
+    &:checked {
+      +.universal-dropdown-label {
+        
+        .universal-dropdown-button {
+          box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.35) !important;
+          
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        .universal-dropdown-list {
+          visibility: visible;
+          height: auto;
+        }
+      }
+    }
+  }
+  
+  .universal-dropdown-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    .universal-dropdown-button {
+      position: relative;
+      min-width: 200px;
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid $gray-light !important;
+      border-radius: 5px;
+      background-color: $white !important;
+      outline: none !important;
+      overflow: hidden;
+      color: $gray !important;
+      text-align: left !important;
+      -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.15);
+      box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.15);
+      transition: all .2s;
+      
+      &:after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 18px;
+        display: inline-block;
+        width: 16px;
+        height: 8px;
+        border: 0;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='22px' height='13px' viewBox='0 0 22 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cg id='LLP-industry-select' transform='translate%28-724.000000, -167.000000%29' stroke-width='2' stroke='%23D1D1D1'%3E%3Cg id='dropdown' transform='translate%28377.000000, 148.000000%29'%3E%3Cpolyline id='Path-3' transform='translate%28358.000000, 25.000000%29 rotate%2890.000000%29 translate%28-358.000000, -25.000000%29 ' points='353 15 363 24.8984656 353 35'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 16px 8px;
+        transition: all .2s;
+      }
+      
+      .universal-dropdown-button-text {
+        font-family: 'Arial';
+        font-size: 1rem;
+        color: $gray;
+        padding: 10px 17px;
+        margin-right: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      
+      .universal-dropdown-list {
+        visibility: hidden;
+        list-style: none;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        overflow: scroll;
+        border-top: 1px solid lighten($gray, 20%);
+        
+        .universal-dropdown-list-item {
+          transition: background-color .2s;
+          
+          &:not(:first-child) {
+            border-top: 1px solid $gray-light;
+          }
+          
+          &:hover {
+            background-color: $primary-color;
+            
+            .universal-dropdown-list-item-text {
+              color: white;
+              text-decoration: none;
+            }
+          }
+          
+          .universal-dropdown-list-item-text {
+            display: block;
+            font-family: 'Arial';
+            font-size: 1rem;
+            color: $gray;
+            padding: 10px 17px;
+          }
+        }
+      }
+    }
+  }
+}
